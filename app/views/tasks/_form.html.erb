@@ -9,15 +9,13 @@
     <%= f.text_area :details, class: 'form-control' %>
   </div>
 
-
-  <div class="form-check form-inline">
-    <%if @task.id%>
-    <%= f.check_box :completed, class: 'form-control', id: 'checkbox' %>
-    <%= f.label :Completed, id: 'checkbox'%>
-    <% else %>
-    <%= '' %>
-    <% end %>
- </div>
+  <% unless f.object.new_record? %>
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :completed %> Completed
+      </label>
+    </div>
+  <% end %>
 
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

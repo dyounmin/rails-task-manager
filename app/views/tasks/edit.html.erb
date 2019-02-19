@@ -1,9 +1,13 @@
+<h1>Edit task</h1>
+
 <%= render 'form', task: @task %>
 
-<%= link_to tasks_new_path do%>
-<i id="plus" class="fa fa-plus" aria-hidden="true">Add a new task</i>
+<hr>
+<%= link_to new_task_path do%>
+<i class="fa fa-plus" aria-hidden="true">Add a new task</i>
 <% end %>
 
+<hr>
 <%= link_to tasks_path do %>
-<i id="back" class="fa fa-arrow-left" aria-hidden="true">Back to list</i>
+<i class="fa fa-arrow-left" aria-hidden="true">Back to list</i>
 <% end %>
